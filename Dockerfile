@@ -8,7 +8,7 @@ COPY pom.xml .
 # Pre-download dependencies (faster rebuilds)
 RUN mvn -B -q -DskipTests dependency:go-offline
 
-# Copy project source
+# Copy project source  
 COPY src ./src
 
 # Build the JAR (skip tests for faster build)
